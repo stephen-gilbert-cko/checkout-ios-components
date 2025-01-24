@@ -1,0 +1,81 @@
+name: "Run CodeQL"
+
+on:
+  push:
+    branches:
+      - 'main'
+      - 'develop'
+      - 'release/*'
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches:
+      - 'main'
+      - 'develop'
+      - 'release/*'
+  schedule:
+    - cron: '34 2 * * 0'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  destination: "platform=iOS Simulator,name=iPhone 16 Pro,OS=latest"
+  configuration: "Debug"
+  versionXcode: "16.0"
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: macos-15-xlarge
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'swift' ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Init Environment Vars
+        run: bash .github/scripts/init-env-vars.sh
+
+      - name: Write Environment Vars to Environment Config
+        run: bash .github/scripts/write-env-vars-to-env-config.sh
+
+      - name: Generate Environment Vars Struct
+        run: bash .github/scripts/codegen-env-vars.sh
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          queries: security-and-quality
+
+      - name: Select Xcode
+        run: |
+          sudo xcode-select -switch /Applications/Xcode_${{ env.versionXcode }}.app
+
+      - name: Log xcodebuild Version
+        run: |
+          xcodebuild -version
+
+      - name: Set git user details
+        run: |
+          echo "https://$USERNAME:$TOKEN@github.com" >> $HOME/.git-credentials
+          git config --global credential.helper store
+        shell: bash
+        env:
+          USERNAME: ${{ secrets.CKO_MOBILE_TEAM_USERNAME }}
+          TOKEN: ${{ secrets.CKO_MOBILE_TEAM_TOKEN }}
+
+      - name: Build Sample Application
+        run: |
+          set -o pipefail && xcodebuild -project "SampleApplication/SampleApplication.xcodeproj" -scheme "SampleApplication" -destination "${{ env.destination }}" | xcpretty

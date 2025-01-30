@@ -14,16 +14,16 @@ import _Concurrency
 import _PassKit_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
-public struct CheckoutComponents {
+public struct CheckoutComponents : Swift.Sendable {
   public init(configuration: CheckoutComponentsSDK.CheckoutComponents.Configuration)
   #if compiler(>=5.3) && $TypedThrows
-  public func create(_ type: CheckoutComponentsSDK.CheckoutComponents.PaymentMethod) throws(CheckoutComponentsSDK.CheckoutComponents.Error) -> any CheckoutComponentsSDK.CheckoutComponents.Actionable
+  @_Concurrency.MainActor public func create(_ type: CheckoutComponentsSDK.CheckoutComponents.PaymentMethod) throws(CheckoutComponentsSDK.CheckoutComponents.Error) -> any CheckoutComponentsSDK.CheckoutComponents.Actionable
   #endif
   #if compiler(>=5.3) && $TypedThrows
-  public func create(_ type: CheckoutComponentsSDK.CheckoutComponents.Component) throws(CheckoutComponentsSDK.CheckoutComponents.Error) -> any CheckoutComponentsSDK.CheckoutComponents.Actionable
+  @_Concurrency.MainActor public func create(_ type: CheckoutComponentsSDK.CheckoutComponents.Component) throws(CheckoutComponentsSDK.CheckoutComponents.Error) -> any CheckoutComponentsSDK.CheckoutComponents.Actionable
   #endif
 }
-public enum CommonUIConstants {
+public enum CommonUIConstants : Swift.Sendable {
   public static let cornerRadius: CoreFoundation.CGFloat
   public static let formCornerRadius: CoreFoundation.CGFloat
 }

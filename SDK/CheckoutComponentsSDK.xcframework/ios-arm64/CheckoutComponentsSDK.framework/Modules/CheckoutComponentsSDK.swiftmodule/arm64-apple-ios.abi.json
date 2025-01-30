@@ -98,6 +98,7 @@
             "moduleName": "CheckoutComponentsSDK",
             "declAttributes": [
               "AccessControl",
+              "Custom",
               "RawDocComment"
             ],
             "throwing": true,
@@ -127,6 +128,7 @@
             "moduleName": "CheckoutComponentsSDK",
             "declAttributes": [
               "AccessControl",
+              "Custom",
               "RawDocComment"
             ],
             "throwing": true,
@@ -6602,6 +6604,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -6803,6 +6812,13 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -9409,56 +9425,56 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 153,
+      "offset": 163,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 203,
+      "offset": 213,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 257,
+      "offset": 277,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 293,
+      "offset": 313,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 328,
+      "offset": 348,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 363,
+      "offset": 383,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants.swift",
       "kind": "FloatLiteral",
-      "offset": 443,
+      "offset": 483,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 517,
+      "offset": 567,
       "length": 2,
       "value": "50"
     },
@@ -9864,14 +9880,14 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Public\/Localization\/Localizer.swift",
       "kind": "Dictionary",
-      "offset": 278,
+      "offset": 299,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/Card\/Validator\/ExpiryDate\/ExpiryDateFormatter.swift",
       "kind": "StringLiteral",
-      "offset": 348,
+      "offset": 362,
       "length": 3,
       "value": "\"\/\""
     },
@@ -10123,28 +10139,28 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Strings.swift",
       "kind": "StringLiteral",
-      "offset": 172,
+      "offset": 182,
       "length": 11,
       "value": "\"Apple Pay\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Strings.swift",
       "kind": "StringLiteral",
-      "offset": 198,
+      "offset": 208,
       "length": 6,
       "value": "\"Card\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Strings.swift",
       "kind": "StringLiteral",
-      "offset": 219,
+      "offset": 229,
       "length": 6,
       "value": "\"Flow\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/Insight\/Logger\/InsightAPILogger.swift",
       "kind": "StringLiteral",
-      "offset": 456,
+      "offset": 477,
       "length": 13,
       "value": "\"en_US_POSIX\""
     },
@@ -10207,7 +10223,7 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/NetworkLayer\/Models\/Request\/ApplePay\/GatewayMerchantID.swift",
       "kind": "StringLiteral",
-      "offset": 227,
+      "offset": 237,
       "length": 21,
       "value": "\"gateway_merchant_id\""
     },
@@ -10389,63 +10405,63 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 124,
-      "length": 7,
-      "value": "\"1.0.0\""
+      "offset": 134,
+      "length": 14,
+      "value": "\"1.0.0-beta-1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 165,
+      "offset": 182,
       "length": 7,
       "value": "\"0.0.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 203,
+      "offset": 220,
       "length": 23,
       "value": "\"CheckoutIosComponents\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 258,
+      "offset": 275,
       "length": 30,
       "value": "\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 315,
+      "offset": 332,
       "length": 5,
       "value": "\"ios\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 503,
+      "offset": 520,
       "length": 27,
       "value": "\"unavailableAppPackageName\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 592,
+      "offset": 609,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 636,
+      "offset": 653,
       "length": 30,
       "value": "\"unavailableAppPackageVersion\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 723,
+      "offset": 750,
       "length": 28,
       "value": "\"logs_observability_enabled\""
     },
@@ -10466,56 +10482,56 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/RowViewConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 154,
+      "offset": 164,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/RowViewConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 190,
+      "offset": 200,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/RowViewConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 236,
+      "offset": 246,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/RowViewConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 283,
+      "offset": 293,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/RowViewConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 324,
+      "offset": 334,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/RowViewConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 378,
+      "offset": 398,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/RowViewConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 414,
+      "offset": 434,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/RowViewConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 469,
+      "offset": 499,
       "length": 2,
       "value": "24"
     },
@@ -10543,28 +10559,28 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/ApplePay\/ViewModel\/DefaultApplePayViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 152,
+      "offset": 171,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/ApplePay\/ViewModel\/DefaultApplePayViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 202,
+      "offset": 221,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/ApplePay\/ViewModel\/DefaultApplePayViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 400,
+      "offset": 419,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/ApplePay\/ViewModel\/DefaultApplePayViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 663,
+      "offset": 682,
       "length": 5,
       "value": "false"
     },
@@ -10599,42 +10615,42 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Public\/Component\/CheckoutComponents+Component+Create.swift",
       "kind": "Dictionary",
-      "offset": 4467,
+      "offset": 4489,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/Insight\/Model\/EventData.swift",
       "kind": "StringLiteral",
-      "offset": 541,
+      "offset": 551,
       "length": 19,
       "value": "\"mobile_session_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/Insight\/Model\/EventData.swift",
       "kind": "StringLiteral",
-      "offset": 583,
+      "offset": 593,
       "length": 13,
       "value": "\"device_data\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/Insight\/Model\/EventData.swift",
       "kind": "StringLiteral",
-      "offset": 625,
+      "offset": 635,
       "length": 20,
       "value": "\"payment_session_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/Insight\/Model\/EventData.swift",
       "kind": "StringLiteral",
-      "offset": 666,
+      "offset": 676,
       "length": 11,
       "value": "\"entity_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/Insight\/Model\/EventData.swift",
       "kind": "StringLiteral",
-      "offset": 709,
+      "offset": 719,
       "length": 23,
       "value": "\"processing_channel_id\""
     },
@@ -11306,112 +11322,112 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 330,
+      "offset": 340,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 476,
+      "offset": 486,
       "length": 20,
       "value": "\"some_unique_string\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 626,
+      "offset": 636,
       "length": 35,
       "value": "\"some_valid_payment_session_secret\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 702,
+      "offset": 712,
       "length": 31,
       "value": "\"some_valid_payment_session_id\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 773,
+      "offset": 783,
       "length": 20,
       "value": "\"some_unique_string\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 827,
+      "offset": 837,
       "length": 14,
       "value": "\"a_public_key\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 1079,
+      "offset": 1089,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 1156,
+      "offset": 1166,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 1244,
+      "offset": 1254,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "IntegerLiteral",
-      "offset": 1319,
+      "offset": 1329,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 1393,
+      "offset": 1403,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 1470,
+      "offset": 1480,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "Array",
-      "offset": 1553,
+      "offset": 1563,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "Array",
-      "offset": 1634,
+      "offset": 1644,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "BooleanLiteral",
-      "offset": 1722,
+      "offset": 1732,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Components\/InternalHelpers\/InternalHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 2900,
+      "offset": 2910,
       "length": 21,
       "value": "\"Tarjeta de crédito\""
     },
@@ -11530,28 +11546,28 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/NetworkLayer\/Models\/Request\/ApplePay\/ApplePayTokenWrapper.swift",
       "kind": "StringLiteral",
-      "offset": 221,
+      "offset": 231,
       "length": 12,
       "value": "\"token_data\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Extensions\/Bundle\/BundleLocator.swift",
       "kind": "StringLiteral",
-      "offset": 543,
+      "offset": 553,
       "length": 39,
       "value": "\"CheckoutComponents_CheckoutComponents\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Extensions\/Bundle\/BundleLocator.swift",
       "kind": "Array",
-      "offset": 1158,
+      "offset": 1168,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Extensions\/Bundle\/BundleLocator.swift",
       "kind": "StringLiteral",
-      "offset": 1644,
+      "offset": 1654,
       "length": 9,
       "value": "\".bundle\""
     },
@@ -11712,119 +11728,119 @@
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/NetworkLayer\/Models\/PaymentSessionToken\/PaymentMethodType.swift",
       "kind": "StringLiteral",
-      "offset": 144,
+      "offset": 154,
       "length": 6,
       "value": "\"card\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/NetworkLayer\/Models\/PaymentSessionToken\/PaymentMethodType.swift",
       "kind": "StringLiteral",
-      "offset": 169,
+      "offset": 179,
       "length": 10,
       "value": "\"applepay\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/NetworkLayer\/Models\/PaymentSessionToken\/PaymentMethodType.swift",
       "kind": "StringLiteral",
-      "offset": 197,
+      "offset": 207,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/Insight\/Model\/LogType.swift",
       "kind": "StringLiteral",
-      "offset": 156,
+      "offset": 166,
       "length": 15,
       "value": "\"product-event\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+Flow.swift",
       "kind": "IntegerLiteral",
-      "offset": 169,
+      "offset": 189,
       "length": 2,
       "value": "72"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+Flow.swift",
       "kind": "IntegerLiteral",
-      "offset": 201,
+      "offset": 221,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/NetworkLayer\/Models\/Request\/ApplePay\/ApplePayTokenHeader.swift",
       "kind": "StringLiteral",
-      "offset": 325,
+      "offset": 335,
       "length": 15,
       "value": "\"transactionId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+TextField.swift",
       "kind": "FloatLiteral",
-      "offset": 175,
+      "offset": 185,
       "length": 3,
       "value": "0.8"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+TextField.swift",
       "kind": "IntegerLiteral",
-      "offset": 230,
+      "offset": 250,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+TextField.swift",
       "kind": "IntegerLiteral",
-      "offset": 265,
+      "offset": 285,
       "length": 2,
       "value": "13"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+TextField.swift",
       "kind": "IntegerLiteral",
-      "offset": 289,
+      "offset": 309,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+TextField.swift",
       "kind": "IntegerLiteral",
-      "offset": 315,
+      "offset": 335,
       "length": 2,
       "value": "26"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+TextField.swift",
       "kind": "IntegerLiteral",
-      "offset": 343,
+      "offset": 363,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+TextField.swift",
       "kind": "IntegerLiteral",
-      "offset": 369,
+      "offset": 389,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+TextField.swift",
       "kind": "IntegerLiteral",
-      "offset": 439,
+      "offset": 469,
       "length": 3,
       "value": "-20"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+TextField.swift",
       "kind": "IntegerLiteral",
-      "offset": 474,
+      "offset": 504,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/CommonUI\/CommonUIConstants+TextField.swift",
       "kind": "IntegerLiteral",
-      "offset": 543,
+      "offset": 583,
       "length": 2,
       "value": "-4"
     },

@@ -1,5 +1,5 @@
-![Checkout.com](https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/media/checkout.com.logo.png)
-![Checkout.com](https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/media/flow-logo.png)
+![Checkout.com](./.github/media/checkout.com.logo.png)
+![Checkout.com](./.github/media/flow-logo.png)
 
 #  Flow for Mobile iOS SDK
 
@@ -45,7 +45,7 @@ If you've never used it before, get started with Apple's step by step guide into
     - **`env-example.xcconfig`**: A template file containing dummy environment variables, which is tracked in source control.
     - **`EnvironmentVars.stencil`**: A code generation template used by  <kbd>[Sourcery](https://github.com/krzysztofzablocki/Sourcery) ↗️ </kbd>
 
-      <img width=20% src="https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/media/config-1.png">
+      <img width=20% src="./.github/media/config-1.png">
 
 2. Open a terminal and navigate to the repository’s root folder:
    ```sh
@@ -66,7 +66,7 @@ If you've never used it before, get started with Apple's step by step guide into
 
 8. After completing the setup, your configuration files should resemble the structure shown below:
 
-    <img width=20% src="https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/media/config-2.png">
+    <img width=20% src="./.github/media/config-2.png">
 
 >**⚠️ Important** <br>
 > The secret key is embedded in the Sample Application **only** for demonstration purposes. Never include a secret key in your production application. Instead, always use your backend API to generate a payment session securely.
@@ -80,7 +80,7 @@ Ensure the Sample Application includes the `NetworkClient` package dependency:
   - Add `NetworkClient-iOS` to the application target using `main` branch. 
   - Change `CheckoutNetworkFakeClient` target to `None`
 
-      <img width=50% src="https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/media/network-client-1.png">
+      <img width=50% src="./.github/media/network-client-1.png">
 
 ## Changelog
 

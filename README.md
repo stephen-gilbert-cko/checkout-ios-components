@@ -1,38 +1,87 @@
-# Flow for Mobile iOS SDK ![BETA](https://img.shields.io/badge/status-BETA-yellow)
+![Checkout.com](https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/media/checkout.com.logo.png)
+![Checkout.com](https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/media/flow-logo.png)
 
-To see the details of how to integrate the SDK, please refer to our [public documentation](https://www.checkout.com/docs/payments/accept-payments/accept-a-payment-on-your-mobile-app).
+#  Flow for Mobile iOS SDK
 
-Also, you can find an example integration by running our Sample Application.
+![BETA](https://img.shields.io/badge/status-BETA-yellow)
+![license](https://img.shields.io/github/license/checkout/checkout-ios-components.svg)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/checkout/checkout-ios-components?label=spm)
 
-## Configuring the sample app:
-When you first clone the repository, you will see 2 files under the `SampleApplication/SampleApplication/Configuration` file:
+- [Minimum Requirements](#minimum-requirements)
+- [Integration](#integration)
+  - [Swift Package Manager](#swift-package-manager)
+- [Setting Up the Sample App](#setting-up-the-sample-app)
+- [Dependencies](#dependencies)
+- [Changelog](#changelog)
 
-<img width="213" alt="initial-state" src="https://github.com/user-attachments/assets/dc5d279d-1902-4c9c-9a8e-0aa5f9053883" />
+## Minimum Requirements
 
-`env-example.xcconfig`: Includes a dummy example of environment variables to be tracked under source control and to be shared.
-`EnvironmentVars.stencil`: Code generation template file for a new tool that we start using: [Sourcery](https://github.com/krzysztofzablocki/Sourcery)
+- iOS 15
+- Xcode 16
+- Swift 6
 
-The actions that you need to take after cloning the repo:
+## Integration
 
-`cd` to the repository's root folder.
-run `bash .github/scripts/init-env-vars.sh`
+For detailed integration steps, refer to our 
+<kbd>[official documentation](https://www.checkout.com/docs/payments/accept-payments/accept-a-payment-on-your-mobile-app)  ↗️ </kbd>. You can also explore our Sample Application for a practical implementation.
 
-Go to the newly copied file that’s `env.xcconfig`, which is an untracked (by `.gitignore`) version of the example file to host the public and private keys
-Replace the dummy values with their own values that you received from Checkout.com.
+**🔐 3DS authentication can be enabled by setting it to `true` during `Configuration` initialization.**
 
-run bash `.github/scripts/codegen-env-vars.sh`
+```swift
+ threeDS: .init(enabled: true, attemptN3D: true)
+```
 
-This will create another untracked but compilable file named `EnvironmentVars.generated.swift` which will be referenced in the code.
+><samp>**attemptN3D** 
+>You can choose to automatically downgrade your payment to a non-3DS payment if there are any technical issues during the 3DS authentication process that would otherwise cause the payment to fail. To do this, set the attemptN3D field in your request to true and we'll automatically attempt to process the payment without 3DS authentication <kbd>[More info](https://www.checkout.com/docs/payments/authenticate-payments) ↗️</kbd></samp>
 
-You can run the sample project and see it up and running!
+### Swift Package Manager
+<kbd>[Swift Package Manager](https://swift.org/package-manager/)  ↗️ </kbd> integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. It should work out of the box on latest Xcode projects since Xcode 11 and has had a lot of community support, seeing huge adoption over the recent years. This is our preferred distribution method for Frames iOS and is the easiest one to integrate, keep updated and build around.
 
-The final thing you will have will look like below:
+If you've never used it before, get started with Apple's step by step guide into <kbd>[adding package dependencies](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app)  ↗️</kbd> to your app
 
-<img width="292" alt="latest-state" src="https://github.com/user-attachments/assets/afd548ac-fe75-4722-966c-1627152b8b8d"/>
+## Setting Up the Sample App
 
+1. After cloning the repository, navigate to `SampleApplication/SampleApplication/Configuration`. You will find the following files:
+    - **`env-example.xcconfig`**: A template file containing dummy environment variables, which is tracked in source control.
+    - **`EnvironmentVars.stencil`**: A code generation template used by  <kbd>[Sourcery](https://github.com/krzysztofzablocki/Sourcery) ↗️ </kbd>
 
-> [!CAUTION]
-> Embedding the secret key into the `Sample Application` is only to see the sample app in a quick way. In real life, you must never embed a secret key into your actual application since there is practically no viable way to secure it fully. You must make a request to your own APIs to create a payment session.
+      <img width=20% src="https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/media/config-1.png">
+
+2. Open a terminal and navigate to the repository’s root folder:
+   ```sh
+   cd path/to/repository
+   ```
+3. Run the initialization script:
+   ```sh
+   bash .github/scripts/init-env-vars.sh
+   ```
+4. Locate the newly created `env.xcconfig` file (excluded from version control) and update it with your Checkout.com public and private keys.
+5. Generate the required Swift environment variables:
+   ```sh
+   bash .github/scripts/codegen-env-vars.sh
+   ```
+6. This script will generate `EnvironmentVars.generated.swift`, which will be used in the project.
+
+7. Open the Sample Application in Xcode and run it.
+
+8. After completing the setup, your configuration files should resemble the structure shown below:
+
+    <img width=20% src="https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/media/config-2.png">
+
+>**⚠️ Important** <br>
+> The secret key is embedded in the Sample Application **only** for demonstration purposes. Never include a secret key in your production application. Instead, always use your backend API to generate a payment session securely.
 
 ## Dependencies
-Please add NetworkClient dynamic dependency to the sample app's Package Dependencies: https://github.com/checkout/NetworkClient-iOS
+
+Ensure the Sample Application includes the `NetworkClient` package dependency: 
+
+- Repository:  <kbd>[NetworkClient-iOS](https://github.com/checkout/NetworkClient-iOS) ↗️</kbd> 
+- Branch: `main`
+  - Add `NetworkClient-iOS` to the application target using `main` branch. 
+  - Change `CheckoutNetworkFakeClient` target to `None`
+
+      <img width=50% src="https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/media/network-client-1.png">
+
+## Changelog
+
+Find our <kbd>[CHANGELOG](https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/CHANGELOG.md) ↗️</kbd>

@@ -84,4 +84,4 @@ Ensure the Sample Application includes the `NetworkClient` package dependency:
 
 ## Changelog
 
-Find our <kbd>[CHANGELOG](https://github.com/checkout/checkout-ios-components/blob/update/readme/.github/CHANGELOG.md) ↗️</kbd>
+Find our <kbd>[CHANGELOG](./.github/CHANGELOG.md) ↗️</kbd>

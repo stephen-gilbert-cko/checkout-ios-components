@@ -9,7 +9,7 @@ import CheckoutComponentsSDK
 import SwiftUI
 
 struct MainView: View {
-  @ObservedObject private var viewModel = MainViewModel()
+  @StateObject private var viewModel = MainViewModel()
 
   var body: some View {
     Group {

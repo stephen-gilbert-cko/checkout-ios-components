@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 
 #### 1.x Releases
 
+## [1.0.0-beta-2](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-2)
+
+Released on 07.02.2025
+
+Updates:
+
+- **Improved Dependencies & Integration** – Improved dependencies and made integration easier.
+- **Signed XCFramework** – XCFramework is now signed so you can verify the source safely.
+- **Locale Fixes** – Fixed locale strings so that they always match the payment session counterpart.
+
 ## [1.0.0-beta-1](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-1)
 
 Released on 30.01.2025

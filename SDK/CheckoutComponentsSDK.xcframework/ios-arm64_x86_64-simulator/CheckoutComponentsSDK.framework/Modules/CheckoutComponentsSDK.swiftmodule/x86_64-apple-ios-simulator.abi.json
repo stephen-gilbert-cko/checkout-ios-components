@@ -9388,7 +9388,7 @@
       "kind": "StringLiteral",
       "offset": 134,
       "length": 14,
-      "value": "\"1.0.0-beta-2\""
+      "value": "\"1.0.0-beta-3\""
     },
     {
       "filePath": "\/Users\/runner\/work\/checkout-ios-components\/checkout-ios-components\/Sources\/CheckoutComponents\/Constants\/Constants.swift",

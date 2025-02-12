@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 
 #### 1.x Releases
 
+## [1.0.0-beta-3](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-3)
+
+Released on 11.02.2025
+
+Updates:
+
+- **Fix a Distribution Setting** – Fixing a distribution setting that allows backwards compatibility with Xcode versions.
+
 ## [1.0.0-beta-2](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-2)
 
 Released on 07.02.2025

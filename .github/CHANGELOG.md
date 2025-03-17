@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 
 #### 1.x Releases
 
+## [1.0.0-beta-4](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-4)
+
+Released on 13.03.2025
+
+Updates:
+
+- **Risk SDK Integration** – Risk SDK calls are now integrated as part of Flow SDK. This is automatically done behind the scenes and requires no code change.
+- **Card Tokenisation Callback** – A new optional callback is added - `onTokenized()` alongside a new function to trigger it `tokenize()`. Ability to hide the pay button in addition to pay button modes: `tokenize and payment` are also implemented.
+
 ## [1.0.0-beta-3](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-3)
 
 Released on 11.02.2025

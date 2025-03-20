@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 
 #### 1.x Releases
 
+## [1.0.0-beta-5](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-4)
+
+Released on 19.03.2025
+
+Updates:
+
+- **Fix Apple Pay Button Bug** – Fixes the view hiearchy that prevented the Apple Pay Button to receive the tap gestures.
+
 ## [1.0.0-beta-4](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-4)
 
 Released on 13.03.2025

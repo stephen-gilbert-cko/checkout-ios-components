@@ -23,6 +23,7 @@
 		951299022CBD788F00DC1715 /* PaymentResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951299012CBD788F00DC1715 /* PaymentResultView.swift */; };
 		9513C3242C47FC0C0018BB7E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513C3232C47FC0C0018BB7E /* MainView.swift */; };
 		951AE3382D5243E800519900 /* CheckoutComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 951AE3372D5243E800519900 /* CheckoutComponents */; };
+		953809282D92D09E003B5C21 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953809272D92D09E003B5C21 /* NavigationHelper.swift */; };
 		95EC13982CB446A200812B24 /* MainViewModel+CallbacksProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC13972CB446A200812B24 /* MainViewModel+CallbacksProvider.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		16FC05492C40170F00D75022 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		951299012CBD788F00DC1715 /* PaymentResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResultView.swift; sourceTree = "<group>"; };
 		9513C3232C47FC0C0018BB7E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		953809272D92D09E003B5C21 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
 		95EC13972CB446A200812B24 /* MainViewModel+CallbacksProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewModel+CallbacksProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 			children = (
 				9513C3232C47FC0C0018BB7E /* MainView.swift */,
 				951299012CBD788F00DC1715 /* PaymentResultView.swift */,
+				953809272D92D09E003B5C21 /* NavigationHelper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				951299022CBD788F00DC1715 /* PaymentResultView.swift in Sources */,
 				16C44C502C526DB500CE0CCE /* NetworkLayer.swift in Sources */,
 				164BC0642CDE772B00F5416F /* Appearance.swift in Sources */,
+				953809282D92D09E003B5C21 /* NavigationHelper.swift in Sources */,
 				16FB25692C582DB40059348E /* PaymentSessionRequest.swift in Sources */,
 				16EFA2392C650D3A00157450 /* MainViewModel.swift in Sources */,
 				16EFA23B2C650E1B00157450 /* Constants.swift in Sources */,

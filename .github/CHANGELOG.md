@@ -5,13 +5,21 @@ All notable changes to this project will be documented in this file.
 
 #### 1.x Releases
 
-## [1.0.0-beta-5](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-4)
+## [1.0.0-beta-6](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-6)
+
+Released on 15.04.2025
+
+Updates:
+
+-   **Address Component** – Introduced a new Address Component, providing a streamlined and user-friendly interface for collecting customer address information. This component simplifies address input, improving the checkout experience and reducing potential errors.
+
+## [1.0.0-beta-5](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-5)
 
 Released on 19.03.2025
 
 Updates:
 
-- **Fix Apple Pay Button Bug** – Fixes the view hiearchy that prevented the Apple Pay Button to receive the tap gestures.
+- **Fix Apple Pay Button Bug** – Fixes the view hierarchy that prevented the Apple Pay Button to receive the tap gestures.
 
 ## [1.0.0-beta-4](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-4)
 

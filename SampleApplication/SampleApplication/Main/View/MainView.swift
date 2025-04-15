@@ -22,7 +22,6 @@ struct MainView: View {
           } label: {
             Text("Merchant Tokenization")
           }
-
         }
       } else {
         initialView()

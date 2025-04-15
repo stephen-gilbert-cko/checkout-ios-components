@@ -9,7 +9,7 @@ import CheckoutComponentsSDK
 import SwiftUI
 
 @MainActor
-final class MainViewModel: ObservableObject, Sendable {
+final class MainViewModel: ObservableObject {
   @Published var checkoutComponentsView: AnyView?
 
   @Published var showPaymentResult: Bool = false
@@ -17,7 +17,11 @@ final class MainViewModel: ObservableObject, Sendable {
   @Published var paymentID: String = ""
   @Published var errorMessage: String = ""
 
-  @Published var isDefaultAppearance = true
+  @Published var isDefaultAppearance = true {
+    didSet {
+      NavigationHelper.navigationBarTitleTextColor(isDefaultAppearance ? .black : .white)
+    }
+  }
   var showPayButton = true
 
   private var component: CheckoutComponents.Actionable?
@@ -34,11 +38,9 @@ extension MainViewModel {
       let renderedComponent = render(component: component)
 
       checkoutComponentsView = renderedComponent
-
     } catch let error as CheckoutComponents.Error {
       errorMessage = error.localizedDescription
       print(error.localizedDescription)
-
     } catch {
       errorMessage = error.localizedDescription
       print("Network error: \(error.localizedDescription).\nCheck if your keys are correct.")
@@ -56,8 +58,7 @@ extension MainViewModel {
                                         failureURL: Constants.failureURL,
                                         threeDS: .init(enabled: true, attemptN3D: true))
 
-    let paymentSession = try await networkLayer.createPaymentSession(request: request)
-    return paymentSession
+    return try await networkLayer.createPaymentSession(request: request)
   }
 
   // Step 2: Initialise an instance of Checkout Components SDK
@@ -76,7 +77,10 @@ extension MainViewModel {
   func createComponent(with checkoutComponentsSDK: CheckoutComponents) throws (CheckoutComponents.Error) -> any CheckoutComponents.Actionable {
     return try checkoutComponentsSDK.create(
       .flow(options: [
-        .card(showPayButton: showPayButton, paymentButtonAction: .payment),
+        .card(showPayButton: showPayButton,
+              paymentButtonAction: .payment,
+              addressConfiguration: addressConfiguration
+             ),
         .applePay(merchantIdentifier: "merchant.com.flow.checkout.sandbox")
       ])
     )
@@ -95,7 +99,39 @@ extension MainViewModel {
 }
 
 extension MainViewModel {
+  var addressConfiguration: CheckoutComponents.AddressConfiguration {
+    typealias ContactData = CheckoutComponents.ContactData
+    typealias Address = CheckoutComponents.Address
+    typealias Configuration = CheckoutComponents.AddressConfiguration
+    
+    let prefilledAddress = ContactData(address: .init(country: .unitedKingdom,
+                                                      addressLine1:  "Wenlock Works",
+                                                      addressLine2: "Shepherdess Walk",
+                                                      city: "London",
+                                                      zip: "N1 7BQ"),
+                                       phone: .init(countryCode: "+$4",
+                                                    number: "1234567890"),
+                                       name: .init(firstName: "John",
+                                                   lastName: "Doe"),
+                                       email: "john_doe@checkout.com")
+    
+    let addressConfiguration = Configuration.init(data: prefilledAddress,
+                                                  fields: CheckoutComponents.AddressField.billing
+                                                          + [.phone(isOptional: false)]) { collectedAddress in
+      debugPrint("Collected address: \(collectedAddress)")
+    }
+
+    return addressConfiguration
+  }
+}
+
+extension MainViewModel {
   func merchantTokenizationTapped() {
-    component?.tokenize()
+    guard let component = component as? CheckoutComponents.Tokenizable else {
+      debugPrint("Component does not conform to Tokenizable. e.g. It might be an Address Component or alike")
+      return
+    }
+
+    component.tokenize()
   }
 }

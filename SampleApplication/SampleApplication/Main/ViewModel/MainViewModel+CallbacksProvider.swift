@@ -14,12 +14,12 @@ extension MainViewModel {
       onReady: { paymentMethod in
         debugPrint("onReady: Payment method: \(paymentMethod.name)")
       },
-      onSubmit: { paymentMethod in
-        debugPrint("onSubmit: Payment method: \(paymentMethod.name)")
-      },
       handleTap: { paymentMethod async -> Bool in
         debugPrint("handleTap: Payment method: \(paymentMethod.name)")
         return true
+      },
+      onSubmit: { paymentMethod in
+        debugPrint("onSubmit: Payment method: \(paymentMethod.name)")
       },
       onTokenized: { tokenDetails in
         debugPrint("onTokenized: Token: \(tokenDetails.token)")

@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 
 #### 1.x Releases
 
+## [1.0.0-beta-8](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-8)
+
+Released on 02.06.2025
+
+Updates:
+
+- **Public API Changes**  
+  – Updated `onTokenized` callback argument type from `TokenDetails` to `TokenizationResult`.
+  
+- ** New Implicitly Available Features** 
+  - Added compliant consumer scheme choice mechanism for co-badged Cartes Bancaires cards. When a Cartes Bancaires card co-badged with Visa or Mastercard is detected, consumers now see both scheme icons displayed at parity and can select their preferred payment scheme.
+  - What’s New
+    - Dual scheme icon display for co-badged Cartes Bancaires cards
+    - Interactive card scheme selection user interface
+    - Compliant with the card scheme choice regulations in France
+    - Seamless fallback for non-co-badged cards
+
 ## [1.0.0-beta-7](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0-beta-7)
 
 Released on 15.05.2025

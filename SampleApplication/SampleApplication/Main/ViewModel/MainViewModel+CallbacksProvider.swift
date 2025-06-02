@@ -28,8 +28,8 @@ extension MainViewModel {
         debugPrint("onSubmit: Payment method: \(paymentMethod.name)")
       },
 
-      onTokenized: { tokenDetails in
-        debugPrint("onTokenized: Token: \(tokenDetails.token)")
+      onTokenized: { tokenizationResult in
+        debugPrint("onTokenized: Token: \(tokenizationResult.data)")
       },
 
       onSuccess: { [weak self] paymentMethod, paymentID in

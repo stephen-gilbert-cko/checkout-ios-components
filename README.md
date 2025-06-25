@@ -40,6 +40,12 @@ If you've never used it before, get started with Apple's step by step guide into
 
 ## Setting Up the Sample App
 
+
+Please use our Dashboard to create <kbd>[sandbox](https://identity-sandbox.checkout.com) ↗️ </kbd>/<kbd>[production](https://identity.checkout.com) ↗️ </kbd> values:
+- processing_channel_id
+- secret_key
+- public_key
+
 1. After cloning the repository, navigate to `SampleApplication/SampleApplication/Configuration`. You will find the following files:
     - **`env-example.xcconfig`**: A template file containing dummy environment variables, which is tracked in source control.
     - **`EnvironmentVars.stencil`**: A code generation template used by  <kbd>[Sourcery](https://github.com/krzysztofzablocki/Sourcery) ↗️ </kbd>
@@ -66,6 +72,8 @@ If you've never used it before, get started with Apple's step by step guide into
 8. After completing the setup, your configuration files should resemble the structure shown below:
 
     <img width=20% src="./.github/media/config-2.png">
+
+9. Set the `processingChannelID` value when creating a `PaymentSessionRequest` in the sample application.
 
 >**⚠️ Important** <br>
 > The secret key is embedded in the Sample Application **only** for demonstration purposes. Never include a secret key in your production application. Instead, always use your backend API to generate a payment session securely.

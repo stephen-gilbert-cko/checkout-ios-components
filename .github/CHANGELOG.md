@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 
 #### 1.x Releases
 
+## [1.0.1](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.1)
+
+Released on 30.06.2025
+
+Updates:
+  
+- ** Apple Pay HotFix ** 
+  - Fixes a bug that led Apple Pay Payments to be blocked.
+
+##
+
 ## [1.0.0](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.0)
 
 Released on 27.06.2025

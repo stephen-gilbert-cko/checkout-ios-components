@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 
 #### 1.x Releases
 
+## [1.1.0](https://github.com/checkout/checkout-ios-components/releases/tag/1.1.0)
+
+Released on 13.08.2025
+
+Updates:
+  
+- **Public API Changes**  
+  – Updated `onTokenized` callback to return `APICallResult`, giving merchants control over token details (accept or reject).
+  – Added `update()` to refresh the Apple Pay amount after updating the payment session via the `handleSubmit` callback. 
+
+- **User Interaction Callbacks**  
+  – Added `onCardBinChanged` to surface BIN changes, enabling scheme-specific discounts or hiding the payment button.
+  – Added `handleSubmit` to submit the payment session request; to apply changes, submit the updated request with the provided `SessionData`.
+  
+- **Improvemnt**
+  – Additional future proof for the SDK robustness.
+  
+##
+
 ## [1.0.1](https://github.com/checkout/checkout-ios-components/releases/tag/1.0.1)
 
 Released on 30.06.2025

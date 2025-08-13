@@ -27,14 +27,17 @@ enum ModuleType: String, CaseIterable {
 
 extension MainView {
   var settingView: some View {
-    VStack {
+    VStack(alignment: .leading) {
       sdkOptionsView
       cardOptionsView
+      submitPaymentMethodView
       addressConfigurationView
       localeView
       environmentView
       appearanceView
+      updateAmountSettingView
     }
+    .padding(.horizontal)
   }
   
   var sdkOptionsView: some View {
@@ -87,6 +90,22 @@ extension MainView {
         
         Text("False")
           .tag(false)
+      }
+             .accessibilityIdentifier(AccessibilityIdentifier.SettingsView.showPayButtonPicker.rawValue)
+    }
+  }
+  
+  var submitPaymentMethodView: some View {
+    HStack {
+      Text("Submit payment method:")
+      
+      Picker("Submit payment method",
+             selection: $viewModel.handleSubmitProvided) {
+        Text("SDK")
+          .tag(false)
+        
+        Text("handleSubmit callback")
+          .tag(true)
       }
              .accessibilityIdentifier(AccessibilityIdentifier.SettingsView.showPayButtonPicker.rawValue)
     }
@@ -156,6 +175,10 @@ extension MainView {
       }
       .accessibilityIdentifier(AccessibilityIdentifier.SettingsView.addressPicker.rawValue)
     }
+  }
+  
+  var updateAmountSettingView: some View {
+    Toggle("Show update amount view", isOn: $viewModel.isShowUpdateView)
   }
   
 }

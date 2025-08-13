@@ -29,6 +29,9 @@ final class MainViewModel: ObservableObject {
   @Published var selectedLocale: String = CheckoutComponents.Locale.en_GB.rawValue
   @Published var selectedEnvironment: CheckoutComponents.Environment = .sandbox
   @Published var selectedAddressConfiguration: AddressComponentConfiguration = .prefillCustomized
+  @Published var handleSubmitProvided = false
+  @Published var updatedAmount = ""
+  @Published var isShowUpdateView = false
 
   @Published var isDefaultAppearance = true {
     didSet {
@@ -36,6 +39,7 @@ final class MainViewModel: ObservableObject {
     }
   }
   
+  var paymentSessionId = ""
   private var component: Any?
   private let networkLayer = NetworkLayer()
   
@@ -48,6 +52,7 @@ extension MainViewModel {
   func makeComponent() async {
     do {
       let paymentSession = try await createPaymentSession()
+      paymentSessionId = paymentSession.id
       let checkoutComponentsSDK = try await initialiseCheckoutComponentsSDK(with: paymentSession)
       let component = try createComponent(with: checkoutComponentsSDK)
       self.component = component
@@ -196,6 +201,7 @@ extension MainViewModel {
     selectedEnvironment = .sandbox
     selectedAddressConfiguration = .prefillCustomized
     isDefaultAppearance = true
+    updatedAmount = ""
   }
   
   func getLocales() -> [String] {
@@ -220,5 +226,26 @@ extension MainViewModel {
       return
     }
     component.tokenize()
+  }
+  
+  func updateApplePayAmount() {
+    guard let amount = Int(updatedAmount) else { return }
+    
+    do {
+      try (component as? any CheckoutComponents.Updatable)?.update(with: CheckoutComponents.UpdateDetails(amount: amount))
+    } catch {
+      errorMessage = error.localizedDescription
+      print("Update amount error: \(error.localizedDescription).\nCheck if your input is correct.")
+    }
+  }
+  
+  func submitPaymentSession(with submitData: String) async throws -> CheckoutComponents.PaymentSessionSubmissionResult {
+    let submitPaymentRequest = SubmitPaymentSessionRequest(sessionData: submitData,
+                                                           amount: 100,
+                                                           threeDS: ThreeDS(enabled: false,
+                                                                            attemptN3D: false))
+    
+    return try await networkLayer.submitPaymentSession(paymentSessionId: paymentSessionId,
+                                                       request: submitPaymentRequest)
   }
 }

@@ -26,6 +26,10 @@ struct MainView: View {
       case .initial:
         EmptyView()
       case .component:
+        if viewModel.selectedModuleType != .card && viewModel.isShowUpdateView {
+          updateAmountView()
+        }
+        
         makeComponentView()
       case .settings:
         settingView
@@ -57,6 +61,17 @@ extension MainView {
           Text("Merchant Tokenization")
         }
       }
+    }
+  }
+
+  @ViewBuilder
+  func updateAmountView() -> some View {
+    HStack {
+      Button("Update amount") {
+        viewModel.updateApplePayAmount()
+      }
+      TextField("Amount", text: $viewModel.updatedAmount)
+        .keyboardType(.numberPad)
     }
   }
 

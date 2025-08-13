@@ -73,7 +73,8 @@ extension MainViewModel {
                                          successURL: Constants.successURL,
                                          failureURL: Constants.failureURL,
                                          threeDS: .init(enabled: true, attemptN3D: true),
-                                         processingChannelID: nil)
+                                         processingChannelID: nil,
+                                         paymentMethodConfiguration: .init(card: .init(storePaymentDetails: "enabled")))
 
      return try await networkLayer.createPaymentSession(request: request)
    }

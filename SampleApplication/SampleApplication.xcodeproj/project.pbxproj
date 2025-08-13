@@ -20,6 +20,8 @@
 		16FB25692C582DB40059348E /* PaymentSessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB25672C582DB40059348E /* PaymentSessionRequest.swift */; };
 		16FC05472C40170F00D75022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FC05462C40170F00D75022 /* Assets.xcassets */; };
 		16FC054A2C40170F00D75022 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FC05492C40170F00D75022 /* Preview Assets.xcassets */; };
+		293C460B2E4CCCF2002885BA /* CheckoutComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 1695611B2D440E3E00030923 /* CheckoutComponents */; };
+		293C460C2E4CCCF2002885BA /* CheckoutComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 951AE33A2D527A7400519900 /* CheckoutComponents */; };
 		951299022CBD788F00DC1715 /* PaymentResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951299012CBD788F00DC1715 /* PaymentResultView.swift */; };
 		9513C3242C47FC0C0018BB7E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513C3232C47FC0C0018BB7E /* MainView.swift */; };
 		951AE3382D5243E800519900 /* CheckoutComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 951AE3372D5243E800519900 /* CheckoutComponents */; };
@@ -59,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293C460C2E4CCCF2002885BA /* CheckoutComponents in Frameworks */,
+				293C460B2E4CCCF2002885BA /* CheckoutComponents in Frameworks */,
 				16A5BCA92D835918007B79C0 /* Risk in Frameworks */,
 				951AE3382D5243E800519900 /* CheckoutComponents in Frameworks */,
 			);
@@ -418,7 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SampleApplication/Preview Content\"";
-				DEVELOPMENT_TEAM = E32XBQK4Q5;
+				DEVELOPMENT_TEAM = X34KMH9ZDX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Checkout.com;
@@ -434,7 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.checkout.components.SampleApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.checkout.flow.sample.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -456,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SampleApplication/Preview Content\"";
-				DEVELOPMENT_TEAM = E32XBQK4Q5;
+				DEVELOPMENT_TEAM = X34KMH9ZDX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Checkout.com;
@@ -472,7 +476,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.checkout.components.SampleApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.checkout.flow.sample.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
